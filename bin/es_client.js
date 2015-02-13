@@ -1,7 +1,7 @@
 var elasticsearch = require('elasticsearch');
 var Promise = require('bluebird');
 getEsClient = function(){
-    var host = process.env.NODE_ENV === "production"? ENV['BONSAI_URL']: 'localhost:9200';
+    var host = process.env.NODE_ENV === "production"? "https://5bkexnn4:gzn0t5dus6y7js6q@smoke-5691776.us-east-1.bonsai.io": 'localhost:9200';
     return new elasticsearch.Client({
         host: host
     });
