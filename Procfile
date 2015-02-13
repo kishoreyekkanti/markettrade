@@ -1,1 +1,1 @@
-web: forever start --uid='trade-processor-4000' --append app.js
+web: node app.js
