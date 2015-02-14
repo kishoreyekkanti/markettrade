@@ -9,6 +9,7 @@ $(document).ajaxStart(function () {
 });
 $(document).ajaxComplete(function () {
     $(".ajaxMsg").text("Here you go..! Below is a brief analysis of the trade");
+    $(".main .text").show();
 });
 function getDataInChartFormat(currencyFrom) {
     var currencyColumns = [];
