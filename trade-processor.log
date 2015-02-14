@@ -152,3 +152,5 @@
 {"name":"trade-processor","hostname":"Yekkanti-2.local","pid":49025,"level":30,"msg":"Trying to fetch es client for undefined","time":"2015-02-14T13:05:28.332Z","v":0}
 {"name":"trade-processor","hostname":"Yekkanti-2.local","pid":49025,"level":30,"msg":"Trying to fetch es client for undefined","time":"2015-02-14T13:05:31.830Z","v":0}
 {"name":"trade-processor","hostname":"Yekkanti-2.local","pid":49025,"level":30,"msg":"Trying to fetch es client for undefined","time":"2015-02-14T13:05:33.416Z","v":0}
+{"name":"trade-processor","hostname":"Yekkanti-2.local","pid":49152,"level":30,"msg":"Trying to fetch es client for undefined","time":"2015-02-14T13:09:57.660Z","v":0}
+{"name":"trade-processor","hostname":"Yekkanti-2.local","pid":49467,"level":30,"msg":"Trying to fetch es client for undefined","time":"2015-02-14T13:14:49.705Z","v":0}

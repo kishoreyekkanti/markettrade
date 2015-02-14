@@ -24,7 +24,8 @@ function getDataInTimeSeriesFormat(creationData) {
     var x = ['x'];
     var data = [];
     $.each(creationData, function (index) {
-        var yyyymmdd = creationData[index].key_as_string.substr(0, 8);
+        var dateString = window.location.hostname.indexOf("herokuapp") > 1 ? creationData[index].key : creationData[index].key_as_string;
+        var yyyymmdd = dateString.substr(0, 8);
         x.push(yyyymmdd.substr(0, 4) + "-" + yyyymmdd.substr(4, 2) + "-" + yyyymmdd.substr(6, 2));
         data.push(creationData[index].doc_count);
     });
