@@ -1,0 +1,1 @@
+web: NODE_ENV=production forever start --uid='trade-processor' -e ./forever.err --append app.js
