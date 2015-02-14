@@ -63,7 +63,7 @@ app.use(function(err, req, res, next) {
 
 var server = http.createServer(app);
 server.listen(process.env.PORT || app.get('port'), function () {
-    console.log('Express server listening on port ' + app.get('port'));
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 module.exports = app;
