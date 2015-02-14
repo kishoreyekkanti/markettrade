@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Market Trade Processor</title>
+    <link href="/stylesheets/c3.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="ajaxMsg"></div>
+<div>
+    Trade break up by Currency From
+    <div id="currencyFromChart"></div>
+</div>
+<div>
+    Trade break up by Currency To
+    <div id="currencyToChart"></div>
+</div>
+<div>
+    Trade break up by Country Origin
+    <div id="originCountry"></div>
+</div>
+<div>
+    Trade break up by Date created
+    <div id="createOn"></div>
+</div>
+
+</body>
+<script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+<!--<script type="text/javascript" src="/javascripts/chart.min.js"></script>-->
+<script src="/javascripts/d3.min.js" charset="utf-8"></script>
+<script src="/javascripts/c3.min.js"></script>
+<script type="text/javascript" src="/javascripts/home.js"></script>
+<script>
+    var data = [
+        {
+            value: 300,
+            color:"#F7464A",
+            highlight: "#FF5A5E",
+            label: "Red"
+        },
+        {
+            value: 50,
+            color: "#46BFBD",
+            highlight: "#5AD3D1",
+            label: "Green"
+        },
+        {
+            value: 100,
+            color: "#FDB45C",
+            highlight: "#FFC870",
+            label: "Yellow"
+        }
+    ]
+
+
+</script>
+</html>

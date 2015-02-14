@@ -5,7 +5,10 @@ var tradeController = require('../controllers/trade_controller');
 var app_logger = require("../logger/logger");
 
 router.get('/', function(req, res, next) {
-    res.send('respond with a resource');
+    res.render('trade_view');
+});
+router.get('/byCurrency', function(req, res, next){
+    tradeController.groupByCurrency(req, res);
 });
 
 router.post('/', function(req, res, next){

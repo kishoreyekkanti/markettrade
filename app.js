@@ -8,15 +8,22 @@ var http = require('http');
 var morganLogger = require('morgan');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
 var trades = require('./routes/trades');
+var handlebars = require('express-handlebars');
+
 global._ROOT = __dirname + '/';
 
 var app = express();
 app.set('port', '4000');
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', '.hbs');
+app.engine('.hbs', handlebars({
+//    defaultLayout: 'index',
+    extname: '.hbs',
+    layoutsDir: 'views',
+    partialsDir: 'views/partials'
+}));
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -27,7 +34,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morganLogger('combined'));
 app.use('/', routes);
-app.use('/users', users);
 app.use('/trades', trades);
 
 // catch 404 and forward to error handler
