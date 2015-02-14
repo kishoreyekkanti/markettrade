@@ -1,4 +1,4 @@
 .idea/
 node_modules/
-trade_processor.log
 forever.err
+trade-processor.log
