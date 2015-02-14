@@ -4,7 +4,7 @@ var app_logger = require("../logger/logger");
 getEsClient = function(){
     app_logger.info("Trying to fetch es client for "+process.env.NODE_ENV);
     app_logger.info("BONSAI URL "+ENV['BONSAI_URL']+" or "+process.env['BONSAI_URL']);
-    var host = process.env.NODE_ENV === "production"? ENV['BONSAI_URL']: 'localhost:9200';
+    var host = process.env.NODE_ENV === "production"? process.env.BONSAI_URL: 'localhost:9200';
     return new elasticsearch.Client({
         host: host
     });
