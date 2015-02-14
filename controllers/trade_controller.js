@@ -1,7 +1,9 @@
 var trade = require('../models/trade');
 var esClient = require('../bin/es_client');
+var app_logger = require("../logger/logger");
 exports.save = function (req, res) {
     var tradeHash = req.body;
+    app_logger.info("request for saving ",tradeHash);
     esClient.save(tradeHash, "trade-processor", "trade")
         .then(function (success) {
             res.send(success);
