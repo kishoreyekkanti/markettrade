@@ -2,7 +2,16 @@ This is a sample trade processing POC using node.js and elasticsearch. Messages 
 
 JSON can take the format of
 ```js
-{"userId": "134256", "currencyFrom": "EUR", "currencyTo": "GBP", "amountSell": 1000, "amountBuy": 747.10, "rate": 0.7471, "timePlaced" : "14-JAN-15 10:27:44", "originatingCountry" : "FR"}
+{
+  "userId": "134256",
+  "currencyFrom": "EUR",
+  "currencyTo": "GBP",
+  "amountSell": 1000,
+  "amountBuy": 747.1,
+  "rate": 0.7471,
+  "timePlaced": "14-JAN-15 10:27:44",
+  "originatingCountry": "FR"
+}
 ```
 
 Used Bluebird as a promise based framework. Haven't introduced cluster or forever as it is a small poc.
